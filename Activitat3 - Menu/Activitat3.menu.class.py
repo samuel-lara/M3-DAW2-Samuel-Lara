@@ -29,6 +29,10 @@ class NoteBook:
 
     def new_note(self, memo, tags=""):
         self.notes.append(Note(memo, tags))
+        
+    def show_notes(self):
+        for note in self.notes:
+            print(note.memo + " (tag:" + note.tags +  ")")
 
 
 #########################
@@ -55,14 +59,9 @@ while contador:
     # numero introduït per teclat per l'usuari
     contador = input('Introduir el número:')
 
-    if contador == "1":  # 1.Mostrar notes-No funciona
-        '''
+    if contador == "1":  # 1.Mostrar notes-Funciona
         print('Mostrant notes...')
-        def imprimirArray(self, array):
-            for i in array:
-                print(i)
-        Llibreta.imprimirArray(Note)
-        '''
+        Llibreta.show_notes()
     elif contador == "2":  # 2.Buscar-Funciona
         buscar = input('Introduïr nota a buscar:')
         print('Buscant...')
