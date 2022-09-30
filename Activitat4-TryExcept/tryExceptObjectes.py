@@ -14,7 +14,8 @@ class Nota:
         
         '''Solo me acepta los ERRORES que yo he creado'''
         #Creamos una función para ejecutar el tryExcept
-    def notesAlumne(self, nota):
+    def notesAlumne(self):
+        nota = int(self.nota)
         try:
             if nota > 10:
                 raise ErrorPersonalitzat("ERROR - No es permet una nota major que 10") #error personalitzat
@@ -34,4 +35,4 @@ if __name__ == "__main__":
     notaIntroduida = int(input("Afegir una nota: "))
     Nota1 = Nota(notaIntroduida)
     print(Nota1.nota)
-    Nota1.notesAlumne(Nota1.nota)
+    Nota1.notesAlumne()
