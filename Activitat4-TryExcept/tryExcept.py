@@ -22,4 +22,6 @@ def notasAlumno():
         print("Aquesta línia sempre s'imprimeix")
 
 if __name__ == "__main__":
-    notasAlumno()
+    contador = True
+    while contador:
+        notasAlumno()
